@@ -1,6 +1,6 @@
 # gtags-scope
 
-An up-to-date version of gtags-cscope.vim from GNU global
+An up-to-date version of gtags-cscope.vim from GNU global (Version 6.6.1)
 
 ## Installation
 
