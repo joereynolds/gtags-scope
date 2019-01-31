@@ -1,11 +1,11 @@
 " File: gtags-cscope.vim
 " Author: Tama Communications Corporation
-" Version: 0.4.1
-" Last Modified: September 10, 2014
+" Version: 0.4.2
+" Last Modified: July 31, 2018
 "
 " Copyright and license
 " ---------------------
-" Copyright (c) 2010, 2011 Tama Communications Corporation
+" Copyright (c) 2010, 2011, 2018 Tama Communications Corporation
 "
 " This file is part of GNU GLOBAL.
 "
@@ -61,6 +61,7 @@
 "	Find egrep pattern	:cs find 6 or e
 "	Find path		:cs find 7 or f
 "	Find include file	:cs find 8 or i
+"	Find assignments	:cs find 9 or a
 "
 " You can move tag list using:
 "	Go to the next tag	 :tn
@@ -223,6 +224,7 @@ function! s:GtagsCscope()
             :nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
             :nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
             :nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+            :nmap <C-\>a :cs find a <C-R>=expand("<cword>")<CR><CR>
             ":nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
             " Using 'CTRL-spacebar', the result is displayed in new horizontal window.
             :nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
@@ -232,6 +234,7 @@ function! s:GtagsCscope()
             :nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
             :nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
             :nmap <C-@>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
+            :nmap <C-@>a :scs find a <C-R>=expand("<cword>")<CR><CR>
             ":nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
             " Hitting CTRL-space *twice*, the result is displayed in new vertical window.
             :nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
@@ -241,6 +244,7 @@ function! s:GtagsCscope()
             :nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
             :nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
             :nmap <C-@><C-@>i :vert scs find i <C-R>=expand("<cfile>")<CR><CR>
+            :nmap <C-@><C-@>a :vert scs find a <C-R>=expand("<cword>")<CR><CR>
             ":nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 	endif
 	" tag command
